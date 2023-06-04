@@ -38,6 +38,7 @@ def arrange_tex(filename):
             arranged_data += arranged_lines
         else:
             arranged_data.append(line)
+    arrange_data.append('\n')
     return arranged_data
 
 if __name__  == '__main__':
