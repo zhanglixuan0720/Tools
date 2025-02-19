@@ -12,7 +12,7 @@ Usage:
 '''
 
 def arrange_tex(filename):
-    text = open(filename,'r')
+    text = open(filename,'r', encoding='utf-8')
     data = text.readlines()
     text.close()
     arranged_data = []
@@ -38,7 +38,7 @@ def arrange_tex(filename):
             arranged_data += arranged_lines
         else:
             arranged_data.append(line)
-    arrange_data.append('\n')
+    arranged_data.append('\n')
     return arranged_data
 
 if __name__  == '__main__':
@@ -50,7 +50,7 @@ if __name__  == '__main__':
     if not output_filename.endswith('.tex'):
         raise Exception('Output must be .tex.')
     arrange_data =  arrange_tex(input_filename)
-    with open(output_filename, "w") as f:
+    with open(output_filename, "w", encoding='utf-8') as f:
         f.writelines(arrange_data)
             
 
