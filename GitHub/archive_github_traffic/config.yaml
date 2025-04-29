@@ -1,0 +1,14 @@
+repo_metadata:
+  - username: "your-github-username"
+    repository: "your-repo-name"
+    token: "your-github-token"
+
+remote_database_metadata:
+  url: "your-nocodb-url" # official: https://app.nocodb.com/
+  table_id: "your-table-id"
+  token: "your-nocodb-token"
+
+local_database_metadata:
+  path: "traffic_data"
+
+archiver_period: 7
